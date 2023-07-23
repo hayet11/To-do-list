@@ -1,0 +1,21 @@
+{% extends 'base.html' %} 
+
+{% block title %} Home page {% endblock %} <!-- we can just change the content with the same scale -->
+{% block content %}
+<br><br>
+<div class="list_title">
+    <h3>Choose your To-do list</h3>
+</div>
+<div class="main">
+    <ul>
+        {% for dic in list_name %}
+        <li><i class='bx bx-heart'></i><a href="/{{ dic.id }}">  {{ dic.name }}</a></li>
+        {% endfor %}
+        <br>
+        <li>
+            <a href="/create"> <button class="btn btn-outline-secondary"> + </button></a>
+        </li>
+    </ul>
+    
+</div>
+{% endblock %} 
